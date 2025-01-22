@@ -1,0 +1,175 @@
+:root {
+    --red: #ff3838;
+    --white: #ffffff;
+    --black: #000000;
+
+    --red-one: #CB356B;
+    --red-two: #BD3F32;
+
+    --green-one: #56ab2f;
+    --green-two: #94d049;
+
+    --black-one: #232526;
+    --black-two: #70767b;
+
+    --blue-one: #021B79;
+    --blue-two: #0575E6;
+
+    --silver: #bdc3c7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* RESPONSIVE VIDEO SECTION */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.video-capt {
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.video-capt2 {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #758989;
+    text-align: center;
+}
+
+/* RESPONSIVE SHOE DISPLAY */
+.shoe-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.shoe-box {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.shoe-box img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+/* RESPONSIVE NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--black);
+    padding: 10px;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1200px) {
+    .video-capt {
+        font-size: 2rem;
+    }
+
+    .video-capt2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-capt {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .video-capt2 {
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .shoe-box {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 40vh;
+    }
+
+    .video-capt {
+        font-size: 1.2rem;
+    }
+
+    .video-capt2 {
+        font-size: 0.9rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar a {
+        font-size: 0.8rem;
+    }
+}
